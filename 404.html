@@ -1,0 +1,184 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>AJAX </title>
+        <meta name="description" content="AJAX " />
+        <meta name="google-site-verification" content="Zleiyr7fX-wdkhvmOZ9dJkEesIvinnOODeLZLPpt3BI" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="./css/normalize.min.css">
+        <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/owl.carousel.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="./js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <div id="page-preloader">
+            <div class="device-search-anim">
+            <div class="circle">
+                    <svg class="ajax-load-circle" width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <defs>
+                        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+                          <stop stop-color="#5BCFEB" stop-opacity="0.375198143" offset="0%"></stop>
+                          <stop stop-color="#29ABE2" offset="100%"></stop>
+                        </linearGradient>
+                        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+                          <feGaussianBlur stdDeviation="0" in="SourceGraphic" result="blur"></feGaussianBlur>
+                        </filter>
+                      </defs>
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                        <g id="OVAL" sketch:type="MSArtboardGroup" stroke="url(#linearGradient-1)" filter="url(#filter-2)" stroke-width="7" opacity="0.7">
+                          <circle id="Oval-6" sketch:type="MSShapeGroup" cx="99.9296875" cy="99.9296875" r="89.9296875"></circle>
+                        </g>
+                      </g>
+                    </svg>
+                    <svg class="ajax-load"  width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                      <g id="LOGO" sketch:type="MSArtboardGroup" fill="#29ABE2">
+                        <g id="Imported-Layers" sketch:type="MSLayerGroup" transform="translate(45.500000, 80.000000)">
+                          <path d="M9.96861825,2.47761918 L0.851880819,0.137547945 L3.43345996,20.2249205 L51.2625698,45.086811 L51.2625698,33.9862301 L11.742473,17.0919507 L9.96861825,2.47761918" id="Fill-2" sketch:type="MSShapeGroup"></path>
+                          <path d="M99.3245438,2.47761918 L97.8164022,17.0919507 L58.5623836,33.9862301 L58.5623836,45.086811 L106.125415,20.2249205 L108.423397,0.137547945 L99.3245438,2.47761918" id="Fill-3" sketch:type="MSShapeGroup"></path>
+                          <path d="M93.005095,4.1352 L54.8697728,13.9662685 L16.5110764,4.1352 L17.3370503,14.1746959 L54.8697728,28.0861315 L92.2911732,14.1746959 L93.005095,4.1352" id="Fill-4" sketch:type="MSShapeGroup"></path>
+                        </g>
+                      </g>
+                    </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-container">
+            <div class="head-left">
+                <a class="main-logo" href="/"><img src="./img/logo-1.png" alt=""></a>
+                <a class="contacts-btn" href="">Контакты</a>
+                <a class="buy-btn" href="">где купить?</a>
+            </div>
+            <div class="head-right">
+                <span class="to-partner">стать партнером</span>
+                <span class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+        </div>
+        <div class="mobile-menu">
+                <a class="contacts-btn" href="">Контакты</a>
+                <a class="buy-btn" href="">где купить?</a>
+        </div>
+        <div class="partner">
+            <header>
+                <svg width="78px" height="49px">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Main" transform="translate(-1184.000000, -41.000000)" fill="#4A4A4A">
+                            <g id="Popup" transform="translate(1005.000000, 1.000000)">
+                                <g id="LOGO" transform="translate(179.000000, 40.000000)">
+                                    <path d="M63.6235294,17.6521739 L63.6235294,5.47826087 L39.1529412,18.2608696 L38.8470588,18.2608696 L14.3764706,5.47826087 L14.4345882,17.7233913 L30.5882353,27.5203478 L30.5882353,38.8381304 L39,44.4786087 L47.4117647,38.9991304 L47.4117647,27.524 L63.6235294,17.6521739" id="Fill-1"></path>
+                                    <path d="M10.4,6.55078261 L10.4,19.9076957 L26.6117647,30.8666522 L26.6117647,49 L0,24.6521739 L1.52941176,0 L10.4,6.55078261" id="Fill-2"></path>
+                                    <path d="M67.6,6.55078261 L67.6,19.9076957 L51.3882353,30.8666522 L51.3882353,49 L78,24.6521739 L76.4705882,0 L67.6,6.55078261" id="Fill-3"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </header>
+            <p>Если вам понравились наши девайсы и вы хотели бы стать нашим дистрибьютором, диллером или инсталятором - введите свою контактную информацию.</p>
+            <div id="result" style="color:#12B4F2;"></div>
+            <form id="contact-form" method="post" role="form" autocomplete="on">
+                <input class="requiredField name" type="text" name="u_name" placeholder="Имя" value="" />
+                <input class="message" type="text" name="u_tell" placeholder="+380ХХХХХХХХХ" value="" />
+                <input class="requiredField email" type="email" name="u_mail" placeholder="Email" value="" />
+                <span class="button-send">стать партнером</span>
+            </form>
+            <span class="close-partner"><i class="icon-close-btn"></i></span>
+        </div>
+        <div class="partner-close"></div>
+        
+        <div class="contacts-popup">
+            <p>
+                <img src="./img/addres-icon.svg" alt="">
+                <span>Украина, г.Киев, ул.Скляренко, 5</span>
+            </p>
+            <p>
+                <img src="img/mail-icon.svg" alt="">
+                <span>sales@ajax.systems</span>
+            </p>
+        </div>
+        <div class="contacts-popup-close"></div>
+        
+        <div class="buy-popup">
+            <img src="./img/secur-logo.svg" alt="">
+            <p>г. Киев, ул. Скляренко 5</p>
+            <p>044 538-15-75&nbsp;&nbsp; | &nbsp;&nbsp;050 468-40-54</p>
+            <a href="http://secur.ua/" target="_blank">www.secur.ua</a>    
+        </div>
+        <div class="buy-popup-close"></div>
+        
+        <div class="main-container page-404">
+            <ul id="scene-device" class="scene">
+                <li class="layer tutorial-device-1" data-depth="0.2"><img src="./img/tutorial-device-1.png" alt="" /></li>
+                <li class="layer tutorial-device-2" data-depth="0.1"><img src="./img/tutorial-device-2.png" alt="" /></li>
+                <li class="layer tutorial-device-3" data-depth="0.03"><img src="./img/tutorial-device-3.png" alt="" /></li>
+            </ul>
+
+            <div class="container-wrap_404"> 
+                <div class="container_404">
+                    <div class="n404e vcenter">
+                        <img src="./img/404.svg" alt="">
+                    </div>
+                    <div class="description vcenter"><p>Запрашиваемая страница отсутствует.</p></div>
+                    <div class="more_description vcenter">
+                        <p>Перейти на <a href="/">главную</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- #main-container -->
+         <div class="footer-container home-footer">
+                <footer>
+                    <span class="open-footer icon-btn-arrow-down"></span>
+                    <div class="copy">&copy; 2015 Ajax Systems Inc</div>
+                    <div class="subscribe">
+                        <span>Подпишись на рассылку</span>
+                        <form id="subscribe-form" method="post" role="form" autocomplete="on">
+                            <div class="input-group">
+                                <input class="requiredField email" type="email" name="u_subscribe" placeholder="Email" value="" />
+                                <div class="btn-send">
+                                    <svg width="26px" height="26px" viewBox="0 0 26 26">
+                                          <g stroke="none" stroke-width="1" fill="none">
+                                            <g transform="translate(1.000000, 1.000000)" stroke="#000000" stroke-width="2">
+                                              <circle cx="12" cy="12" r="12"></circle>
+                                              <path d="M12,7.37319712 L16.6869816,12.0311128 L12.0137142,16.6268029"></path>
+                                            </g>
+                                            <rect id="Rectangle-425" fill="#000000" x="7" y="12" width="10" height="2"></rect> 
+                                          </g>
+                                      </svg>
+                                </div>
+                            </div>
+                            <div class="subscribe-done"></div>          
+                        </form> 
+                    </div>
+                    <div class="social">
+                    </div>
+                </footer>
+            </div>
+        
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.2.min.js"><\/script>')</script>   
+        <script src="./js/jquery.parallax.js"  type="text/javascript" ></script>
+        <script>
+            $('#scene-device').parallax();
+        </script>
+        <script src="./js/main.js"></script>
+
+    </body>
+</html>

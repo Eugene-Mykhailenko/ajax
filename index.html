@@ -1,0 +1,292 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" name="viewport" content="width=device-width, initial-scale=1">
+        <title>AJAX</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="./css/normalize.min.css">
+        <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/owl.carousel.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="./js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <div id="page-preloader">
+            <div class="device-search-anim">
+                <div class="circle">
+                    <svg class="ajax-load-circle" width="200px" height="200px" viewBox="0 0 200 200">
+                      <defs>
+                        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+                          <stop stop-color="#5BCFEB" stop-opacity="0.375198143" offset="0%"></stop>
+                          <stop stop-color="#29ABE2" offset="100%"></stop>
+                        </linearGradient>
+                        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+                          <feGaussianBlur stdDeviation="0" in="SourceGraphic" result="blur"></feGaussianBlur>
+                        </filter>
+                      </defs>
+                      <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                        <g id="OVAL" sketch:type="MSArtboardGroup" stroke="url(#linearGradient-1)" filter="url(#filter-2)" stroke-width="7" opacity="0.7">
+                          <circle id="Oval-6" sketch:type="MSShapeGroup" cx="99.9296875" cy="99.9296875" r="89.9296875"></circle>
+                        </g>
+                      </g>
+                    </svg>
+                    <svg class="ajax-load"  width="200px" height="200px" viewBox="0 0 200 200">
+                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                      <g id="LOGO" sketch:type="MSArtboardGroup" fill="#29ABE2">
+                        <g id="Imported-Layers" sketch:type="MSLayerGroup" transform="translate(45.500000, 80.000000)">
+                          <path d="M9.96861825,2.47761918 L0.851880819,0.137547945 L3.43345996,20.2249205 L51.2625698,45.086811 L51.2625698,33.9862301 L11.742473,17.0919507 L9.96861825,2.47761918" id="Fill-2" sketch:type="MSShapeGroup"></path>
+                          <path d="M99.3245438,2.47761918 L97.8164022,17.0919507 L58.5623836,33.9862301 L58.5623836,45.086811 L106.125415,20.2249205 L108.423397,0.137547945 L99.3245438,2.47761918" id="Fill-3" sketch:type="MSShapeGroup"></path>
+                          <path d="M93.005095,4.1352 L54.8697728,13.9662685 L16.5110764,4.1352 L17.3370503,14.1746959 L54.8697728,28.0861315 L92.2911732,14.1746959 L93.005095,4.1352" id="Fill-4" sketch:type="MSShapeGroup"></path>
+                        </g>
+                      </g>
+                    </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-container">
+            <div class="head-left">
+                <a class="main-logo" href=""><img src="img/logo-1.png" alt=""></a>
+                <a class="contacts-btn" href="">Контакты</a>
+                <a class="buy-btn" href="">где купить?</a>
+            </div>
+            <div class="head-right">
+                <span class="to-partner">стать партнером</span>
+                <div class="lang-swich">
+                    <span>Рус</span>
+                    <i class="fa fa-angle-down"></i>
+                </div>
+                <span class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+        </div>
+        
+        <div class="lang-popup">
+            <a class="active" href="./index.html">Рус</a>
+            <a class="" href="./en/index.html">Eng</a>
+        </div>
+
+        <div class="mobile-menu">
+                <a class="contacts-btn" href="">Контакты</a>
+                <a class="buy-btn" href="">где купить?</a>
+        </div>
+        <div class="partner">
+            <header>
+                <svg width="107px" height="44px">   
+                    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                        <g id="Main"  fill="#4A4A4A">
+                            <g id="Popup">
+                                <g id="LOGO">
+                                <path d="M9.96861825,2.47761918 L0.851880819,0.137547945 L3.43345996,20.2249205 L51.2625698,45.086811 L51.2625698,33.9862301 L11.742473,17.0919507 L9.96861825,2.47761918" id="Fill-2" sketch:type="MSShapeGroup"></path>
+                                <path d="M99.3245438,2.47761918 L97.8164022,17.0919507 L58.5623836,33.9862301 L58.5623836,45.086811 L106.125415,20.2249205 L108.423397,0.137547945 L99.3245438,2.47761918" id="Fill-3" sketch:type="MSShapeGroup"></path>
+                                <path d="M93.005095,4.1352 L54.8697728,13.9662685 L16.5110764,4.1352 L17.3370503,14.1746959 L54.8697728,28.0861315 L92.2911732,14.1746959 L93.005095,4.1352" id="Fill-4" sketch:type="MSShapeGroup"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </header>
+            <p>Если вам понравились наши девайсы и вы хотели бы стать нашим дистрибьютором, диллером или инсталятором - введите свою контактную информацию.</p>
+            <div id="result" style="color:#12B4F2;"></div>
+            <form id="contact-form" method="post" role="form" autocomplete="on">
+                <input class="requiredField name" type="text" name="u_name" placeholder="Имя" value="" />
+                <input class="message" type="text" name="u_tell" placeholder="+380ХХХХХХХХХ" value="" />
+                <input class="requiredField email" type="email" name="u_mail" placeholder="Email" value="" />
+                <span class="button-send">стать партнером</span>
+            </form>
+            <span class="close-partner"><i class="icon-close-btn"></i></span>
+        </div>
+        <div class="partner-close"></div>
+        
+        <div class="contacts-popup">
+            <p>
+                <img src="img/addres-icon.svg" alt="">
+                <span>Украина, г.Киев, ул.Скляренко, 5</span>
+            </p>
+            <p>
+                <img src="img/mail-icon.svg" alt="">
+                <span>sales@ajax.systems</span>
+            </p>
+        </div>
+        <div class="contacts-popup-close"></div>
+        
+        <div class="buy-popup">
+            <img src="img/secur-logo.svg" alt="">
+            <p>г. Киев, ул. Скляренко 5</p>
+            <p>044 538-15-75&nbsp;&nbsp; | &nbsp;&nbsp;050 468-40-54</p>
+            <a href="http://secur.ua/" target="_blank">www.secur.ua</a>    
+        </div>
+        <div class="buy-popup-close"></div>
+
+        <div class="main-container main-container_index">
+            <header class="products-header">Наши продукты</header>
+            <div class="products-block">
+                 <div class="products-list owl-carousel">
+                     <div class="prod-item">
+                        
+                        <div class="table-cell">
+                            <a href="products.html#DoorProtect">
+                                <img class="product-pic" src="img/door-prod.png" alt="doorprotect ajax">
+                                 <h2 class="product-title">DoorProtect</h2>
+                                 <h3 class="products-subtitle">Датчик открытия дверей и окон</h3>
+                                 <p class="products-description">Английский Hi-End сенсор, уникальная беспроводная технология, миниатюрные размеры делают Ajax DoorProtect идеальным защитником вашего покоя.</p>
+                            </a>
+                        </div>
+                        
+                     </div>
+                     <div class="prod-item">
+                        
+                        <div class="table-cell">
+                            <a href="products.html#MotionProtect">
+                                <img class="product-pic" src="img/moove-prod.png" alt="motionprotect ajax">
+                                <h2 class="product-title">MotionProtect</h2>
+                                <h3 class="products-subtitle">Датчик движения</h3>
+                                <p class="products-description">Детектирует людей с первых шагов, игнорирует животных, сквозняки и кондиционеры. Передавая сигналы на расстояние до 3х км может проработать от батареи до 10 лет.</p>
+                            </a>
+                         </div>
+                         
+                     </div>
+                     <div class="prod-item">
+                        <div class="table-cell">
+                            <a href="products.html#GlassProtect">
+                                <img class="product-pic" src="img/glass-prod.png" alt="glassprotect ajax">
+                                <h2 class="product-title">GlassProtect</h2>
+                                <h3 class="products-subtitle">Датчик разбития стекла</h3>
+                                <p class="products-description">Самые маленькие размеры в мире среди датчиков разбития. Беспроводная технология. 2-х факторное определение разбития стекла существенно снижает риск ложных срабатываний.</p>
+                            </a>
+                         </div>
+                     </div>
+                     <div class="prod-item">
+                        <div class="table-cell">
+                            <a href="products.html#SpaceControl">
+                                <img class="product-pic" src="img/spacecontrol-prod.png" alt="spacecontrol ajax">
+                                <h2 class="product-title">SpaceControl</h2>
+                                <h3 class="products-subtitle">Брелок</h3>
+                                <p class="products-description">Ключ для управления охранной системой. Уникальное плавающее кодирование без постоянной составляющей исключает подлог сигнала.</p>
+                            </a>
+                         </div>
+                     </div>
+                     <div class="prod-item">
+                        <div class="table-cell">
+                            <a href="products.html#uartBridge">
+                                <img class="product-pic" src="img/uartbridge-prod.png" alt="uartbridge ajax">
+                                <h2 class="product-title">uartBridge</h2>
+                                <h3 class="products-subtitle">Модуль интеграции для разработчиков</h3>
+                                <p class="products-description">Мост, позволящий добавить поддержку нашей беспроводной системы в вашу охранную централь или хаб умного дома через UART.</p>
+                            </a>
+                         </div>
+                     </div>
+                     <div class="prod-item">
+                        <div class="table-cell">
+                            <a href="products.html#ocBridge">
+                                <img class="product-pic" src="img/ocbridge-prod.png" alt="ocbidge ajax">
+                                <h2 class="product-title">ocBridge</h2>
+                                <h3 class="products-subtitle">Модуль интеграции для инсталяторов</h3>
+                                <p class="products-description">ocBridge позволяет сделать любую проводную охранную централь беспроводной. 8 охранных зон, 4 сервисных. Настройка с ПК. Лог событий. Режимы тестирования.</p>
+                            </a>
+                         </div>
+                     </div>
+                 </div>
+            </div><!-- #wrapper -->
+           
+        </div> <!-- #main-container -->
+         <div class="footer-container home-footer">
+                <footer>
+                    <span class="open-footer icon-btn-arrow-down"></span>
+                    <div class="copy">&copy; 2015 Ajax Systems Inc</div>
+                    <div class="subscribe">
+                        <span>Подпишись на рассылку</span>
+                        <form id="subscribe-form" method="post" role="form" autocomplete="on">
+                            <div class="input-group">
+                                <input class="requiredField email" type="email" name="u_subscribe" placeholder="Email" value="" />
+                                <div class="btn-send">
+                                    <svg width="26px" height="26px" viewBox="0 0 26 26">
+                                        <g stroke="none" stroke-width="1" fill="none">
+                                          <g transform="translate(1.000000, 1.000000)" stroke="#000000" stroke-width="1">
+                                            <circle cx="12" cy="12" r="12"></circle>
+                                            <path d="M12,7.37319712 L16.6869816,12.0311128 L12.0137142,16.6268029"></path>
+                                          </g>
+                                          <rect id="Rectangle-425" fill="#000000" x="7" y="13" width="10" height="1"></rect> 
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="subscribe-done"></div>          
+                        </form> 
+                    </div>
+                </footer>
+            </div>
+        
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="./js/owl.carousel.min.js"></script>
+        <script>
+            $('.owl-carousel').owlCarousel({
+                items:5,
+                loop:false,
+                nav:true,
+                responsiveClass:true,
+                responsiveRefreshRate : 500,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    450:{
+                        items:2
+                    },
+                    768:{
+                        items:3
+                    },
+                    1024:{
+                        items:4
+                    },
+                    1400:{
+                        items:5
+                    }
+                },
+                navText: [
+                  '<img src="img/arrow-slider-left.svg" alt="">',
+                  '<img src="img/arrow-slider-right.svg" alt="">'
+                  ]
+            });
+
+            
+            
+            $(".owl-prev").fadeOut();
+            $('.owl-next').click(function(){
+              $(".owl-prev").fadeIn("slow");
+              if($('.owl-item').last().hasClass('active')) {
+                $(".owl-next").fadeOut("slow");
+              }
+            });
+
+            $('.owl-prev').click(function(){
+              if($('.owl-item').first().hasClass('active')) {
+               $(".owl-prev").fadeOut("slow");
+              }
+            });
+            
+
+
+                
+        </script>
+        <script src="./js/main.js"></script>
+      
+    </body>
+</html>
